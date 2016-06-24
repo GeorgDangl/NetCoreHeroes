@@ -7,7 +7,7 @@ var paths = {
 
 var clientLibraries = [
     "core-js",
-    "zone-js",
+    "zone.js",
     "reflect-metadata",
     "systemjs",
     "@angular",
