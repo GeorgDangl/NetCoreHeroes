@@ -27,7 +27,7 @@ import { HeroDetailComponent } from './hero-detail.component';
         ROUTER_PROVIDERS,
         HeroService
     ],
-    styleUrls: ['/app/app.component.css']
+    styleUrls: ['app/app.component.css']
 })
 @RouteConfig([
     {
