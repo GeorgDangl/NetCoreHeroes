@@ -54,7 +54,7 @@ namespace NetCoreHeroes
                     dbContext.SaveChanges();
                 }
             }
-
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }
