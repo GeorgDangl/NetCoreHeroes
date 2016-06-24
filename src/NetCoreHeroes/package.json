@@ -2,7 +2,7 @@
   "name": "net-core-heroes",
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "typings install",
+    "postinstall": "typings install && gulp copyClientDeps",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings"
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "typescript": "^1.8.10",
-    "typings": "^1.0.4"
+    "typings": "^1.0.4",
+    "gulp": "3.9.1"
   }
 }
