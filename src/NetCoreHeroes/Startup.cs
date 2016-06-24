@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NetCoreHeroes.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace NetCoreHeroes
 {
@@ -27,6 +29,9 @@ namespace NetCoreHeroes
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddEntityFrameworkInMemoryDatabase()
+                .AddDbContext<HeroesContext>(options => options.UseInMemoryDatabase());
+
             // Add framework services.
             services.AddMvc();
         }
@@ -36,6 +41,19 @@ namespace NetCoreHeroes
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                using (var dbContext = serviceScope.ServiceProvider.GetService<HeroesContext>())
+                {
+                    var heroNames = new[] {"Mr. Nice", "Narco", "Bombasto", "Celeritas", "Magneta", "RubberMan", "Dynama", "Dr IQ", "Magma", "Tornado"};
+                    foreach (var heroName in heroNames)
+                    {
+                        dbContext.Heroes.Add(new Hero {Name = heroName});
+                    }
+                    dbContext.SaveChanges();
+                }
+            }
 
             app.UseMvc();
         }
