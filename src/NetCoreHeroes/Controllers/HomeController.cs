@@ -2,10 +2,10 @@
 
 namespace NetCoreHeroes.Controllers
 {
-    [Route("/")]
+    [Route("[Controller]")]
     public class HomeController : Controller
     {
-        [Route("/{*angularUrl}")]
+        [Route("{*angularUrl}")]
         public IActionResult Index(string angularUrl)
         {
             ViewData["AngularBase"] = Url.Action(nameof(Index), new { angularUrl = string.Empty });
