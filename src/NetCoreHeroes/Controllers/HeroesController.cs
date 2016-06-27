@@ -56,12 +56,13 @@ namespace NetCoreHeroes.Controllers
             {
                 return BadRequest(new {error = "Hero must have a name!"});
             }
-            _context.Heroes.Add(new Hero
+            var newDbHero = new Hero
             {
                 Name = newHero.Name
-            });
+            };
+            _context.Heroes.Add(newDbHero);
             _context.SaveChanges();
-            return Ok();
+            return Ok(newDbHero);
         }
 
         [HttpDelete("{id}")]
