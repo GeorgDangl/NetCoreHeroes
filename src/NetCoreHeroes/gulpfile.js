@@ -1,4 +1,5 @@
 ﻿var gulp = require('gulp');
+var merge = require('merge-stream');
 
 var paths = {
     nodeModules: "./node_modules/",
@@ -15,9 +16,11 @@ var clientLibraries = [
 ];
 
 gulp.task("copyClientDeps",
-    function() {
+    function () {
+        var mergeStream = merge();
         for (var i = 0; i < clientLibraries.length; i++) {
-            gulp.src(paths.nodeModules + clientLibraries[i] + "/**/*")
-                .pipe(gulp.dest(paths.clientDeps + clientLibraries[i]));
+            mergeStream.add(gulp.src([paths.nodeModules + clientLibraries[i] + "/**/*", '!' + paths.nodeModules + clientLibraries[i] + "/**/*tsconfig.json"])
+                .pipe(gulp.dest(paths.clientDeps + clientLibraries[i])));
         }
+        return mergeStream;
     });
