@@ -1,5 +1,5 @@
 ﻿/*
- * See here if using Typescript 1.8.31 extensions, there's a bug that needs some manual fixing:
+ * See here if using Typescript 1.8.34 extensions or below, there's a bug that needs some manual fixing:
  * https://github.com/Microsoft/TypeScript/issues/8518
  */
 
