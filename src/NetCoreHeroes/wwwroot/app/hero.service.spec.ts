@@ -29,7 +29,6 @@ const makeHeroData = () => [
 ];
 
 ////////  SPECS  /////////////
-
 describe('HeroService', () => {
 
     beforeEach(() => {
@@ -46,13 +45,11 @@ describe('HeroService', () => {
                 expect(service instanceof HeroService).toBe(true);
             }));
 
-
     it('can instantiate service with "new"', inject([Http], (http: Http) => {
         expect(http).not.toBeNull('http should be provided');
         let service = new HeroService(http);
         expect(service instanceof HeroService).toBe(true, 'new service should be ok');
     }));
-
 
     it('can provide the mockBackend as XHRBackend',
         inject([XHRBackend], (backend: MockBackend) => {
@@ -64,7 +61,6 @@ describe('HeroService', () => {
         let service: HeroService;
         let fakeHeroes: HeroData[];
         let response: Response;
-
 
         beforeEach(inject([Http, XHRBackend], (http: Http, be: MockBackend) => {
             backend = be;
@@ -94,11 +90,9 @@ describe('HeroService', () => {
                     expect(heroes.length).toEqual(0, 'should have no heroes');
                 });
         })));
-
     });
 
     describe('save', () => {
-
         it('should call PUT when hero has id', async(inject([HeroService, XHRBackend], (heroService: HeroService, mockBackend: MockBackend) => {
             var hero = new Hero();
             hero.name = 'George';
@@ -132,6 +126,5 @@ describe('HeroService', () => {
                     expect(calledRequestMethod).toBe(RequestMethod.Post);
                 });
         })));
-
     });
 });
