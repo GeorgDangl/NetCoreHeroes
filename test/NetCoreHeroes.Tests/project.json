@@ -1,6 +1,5 @@
 ﻿{
   "version": "1.0.0-*",
-
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.0",
@@ -11,9 +10,7 @@
     "dotnet-test-xunit": "1.0.0-rc2-build10025",
     "Microsoft.EntityFrameworkCore.InMemory": "1.0.0"
   },
-
   "testRunner": "xunit",
-
   "frameworks": {
     "netcoreapp1.0": {
       "imports": [
