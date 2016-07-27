@@ -53,11 +53,18 @@
       "wwwroot",
       "Views",
       "appsettings.json",
-      "web.config"
+      "web.config",
+      "project.json"
+    ],
+    "exclude": [
+      "wwwroot/app/**/*.spec.*",
+      "wwwroot/chutzpah.json",
+      "wwwroot/testSetup.js"
     ]
   },
 
   "scripts": {
+    "prepublish": "npm install",
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }
