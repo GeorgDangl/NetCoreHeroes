@@ -55,7 +55,10 @@ namespace NetCoreHeroes
                 }
             }
             app.UseStaticFiles();
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("angular2SPA", "{angularUrl?}", new { controller = "Home", action = "Index" });
+            });
         }
     }
 }
