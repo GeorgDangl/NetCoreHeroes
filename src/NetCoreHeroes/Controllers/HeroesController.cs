@@ -50,7 +50,7 @@ namespace NetCoreHeroes.Controllers
         }
 
         [HttpPost]
-        public IActionResult IActionResult([FromBody]Hero newHero)
+        public IActionResult Post([FromBody]Hero newHero)
         {
             if (string.IsNullOrWhiteSpace(newHero.Name))
             {
