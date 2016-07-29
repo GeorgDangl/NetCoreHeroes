@@ -52,4 +52,9 @@ export class HeroesComponent implements OnInit {
             })
             .catch(error => this.error = error); // TODO: Display error message
     }
+
+    resetHeroes() {
+        this.heroService.resetHeroes()
+            .then(() => this.getHeroes());
+    }
 }

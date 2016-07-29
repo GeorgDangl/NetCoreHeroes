@@ -77,5 +77,22 @@ namespace NetCoreHeroes.Controllers
             _context.SaveChanges();
             return Ok();
         }
+
+        [HttpPost("reset")]
+        public IActionResult ResetHeroes()
+        {
+            if (_context.Heroes.Any())
+            {
+                _context.Heroes.RemoveRange(_context.Heroes);
+                _context.SaveChanges();
+            }
+            var heroNames = new[] { "Mr. Nice", "Narco", "Bombasto", "Celeritas", "Magneta", "RubberMan", "Dynama", "Dr IQ", "Magma", "Tornado" };
+            foreach (var heroName in heroNames)
+            {
+                _context.Heroes.Add(new Hero { Name = heroName });
+            }
+            _context.SaveChanges();
+            return Ok();
+        }
     }
 }
