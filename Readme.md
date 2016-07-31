@@ -6,6 +6,8 @@ NetCoreHeroes is an example project for the [Angular 2 Tour of Heroes tutorial](
 TypeScript in Visual Studio 2015. It's currently on Angular 2 RC4 and Asp.Net Core 1.0.
 I've [published a few blog posts](https://blog.dangl.me/archive/netcoreheroes-angular2-with-net-core-in-visual-studio-2015-part-i/) describing the process from setting up Visual Studio to Continuous Integration with Jenkins.
 
+**A live example is [available here](http://netcoreheroes.dangl.me).**
+
 ## Build and run the project
 
 **Visual Studio**: Restore node packages for the main `NetCoreHeroes` project and hit F5 to launch in debug mode.
