@@ -12,7 +12,8 @@ var clientLibraries = [
     "reflect-metadata",
     "systemjs",
     "@angular",
-    "rxjs"
+    "rxjs",
+    "es6-shim"
 ];
 
 gulp.task("copyClientDeps",
