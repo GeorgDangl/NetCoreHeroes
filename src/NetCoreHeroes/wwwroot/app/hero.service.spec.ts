@@ -1,6 +1,7 @@
 ﻿// Structure (and most code=) taken from https://raw.githubusercontent.com/angular/angular.io/master/public/docs/_examples/testing/ts/app/http-hero.service.spec.ts at commit abd860c
 
-import { addProviders, async, inject, withProviders } from '@angular/core/testing';
+import { async, inject, TestBed, withModule } from '@angular/core/testing';
+import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
 import { TestComponentBuilder } from '@angular/core/testing';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import {
@@ -8,7 +9,8 @@ import {
     ConnectionBackend, XHRBackend,
     Request, RequestMethod, BaseRequestOptions, RequestOptions,
     Response, ResponseOptions,
-    URLSearchParams
+    URLSearchParams,
+    HttpModule
 } from '@angular/http';
 
 // Add all operators to Observable
@@ -28,22 +30,35 @@ const makeHeroData = () => [
     { id: '4', name: 'Tornado' }
 ];
 
+// The following initializes the test environment for Angular 2. This call is required for Angular 2 dependency injection.
+TestBed.resetTestEnvironment();
+TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+
 ////////  SPECS  /////////////
 describe('HeroService', () => {
 
     beforeEach(() => {
-        addProviders([
-            HTTP_PROVIDERS,
-            HeroService,
-            { provide: XHRBackend, useClass: MockBackend }
-        ]);
+
+        TestBed.configureTestingModule({
+            providers: [
+                { provide: XHRBackend, useClass: MockBackend },
+                HeroService
+            ],
+            imports: [
+                HttpModule
+            ]
+        });
     });
 
     it('can instantiate service when inject service',
-        withProviders(() => [HeroService])
-            .inject([HeroService], (service: HeroService) => {
-                expect(service instanceof HeroService).toBe(true);
-            }));
+        withModule({
+            providers: [
+                HeroService
+            ]
+        }, inject([HeroService], (service: HeroService) => {
+            expect(service instanceof HeroService).toBe(true);
+        }))
+    );
 
     it('can instantiate service with "new"', inject([Http], (http: Http) => {
         expect(http).not.toBeNull('http should be provided');
@@ -74,7 +89,6 @@ describe('HeroService', () => {
             backend.connections.subscribe((c: MockConnection) => c.mockRespond(response));
 
             service.getHeroes()
-                // .then(() => Promise.reject('deliberate'))
                 .then(heroes => {
                     expect(heroes.length).toEqual(fakeHeroes.length,
                         'should have expected no. of heroes');
