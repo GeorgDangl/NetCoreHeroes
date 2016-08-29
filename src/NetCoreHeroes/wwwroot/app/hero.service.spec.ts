@@ -2,14 +2,12 @@
 
 import { async, inject, TestBed, withModule } from '@angular/core/testing';
 import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
-import { TestComponentBuilder } from '@angular/core/testing';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import {
-    Http, HTTP_PROVIDERS,
-    ConnectionBackend, XHRBackend,
+    Http,
+    XHRBackend,
     Request, RequestMethod, BaseRequestOptions, RequestOptions,
     Response, ResponseOptions,
-    URLSearchParams,
     HttpModule
 } from '@angular/http';
 
@@ -31,6 +29,7 @@ const makeHeroData = () => [
 ];
 
 // The following initializes the test environment for Angular 2. This call is required for Angular 2 dependency injection.
+// That's new in Angular 2 RC5
 TestBed.resetTestEnvironment();
 TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
 
