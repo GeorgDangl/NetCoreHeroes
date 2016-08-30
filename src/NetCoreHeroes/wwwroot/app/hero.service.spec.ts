@@ -37,7 +37,6 @@ TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicT
 describe('HeroService', () => {
 
     beforeEach(() => {
-
         TestBed.configureTestingModule({
             providers: [
                 { provide: XHRBackend, useClass: MockBackend },
@@ -86,7 +85,6 @@ describe('HeroService', () => {
 
         it('should have expected fake heroes', async(inject([], () => {
             backend.connections.subscribe((c: MockConnection) => c.mockRespond(response));
-
             service.getHeroes()
                 .then(heroes => {
                     expect(heroes.length).toEqual(fakeHeroes.length,
