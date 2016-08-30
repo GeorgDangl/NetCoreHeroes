@@ -19,7 +19,7 @@ Then run `dotnet restore` and `dotnet build` to compile the Asp.Net Core backend
 
 ### Asp.Net Core Tests
 
-Just build the whole solution, The `NetCoreHeroes.Tests` project has the required xUnit dependencies so unit tests are automatically
+Just build the whole solution, the `NetCoreHeroes.Tests` project has the required xUnit dependencies so unit tests are automatically
 discovered in Visual Studio.
 
 ### TypeScript Tests
