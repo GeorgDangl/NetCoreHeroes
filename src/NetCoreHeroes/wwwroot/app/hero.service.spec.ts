@@ -103,8 +103,8 @@ describe('HeroService', () => {
         })));
     });
 
-    describe('save', () => {
-        it('should call PUT when hero has id', async(inject([HeroService, XHRBackend], (heroService: HeroService, mockBackend: MockBackend) => {
+    describe('request', () => {
+        it('update should call PUT when hero has id', async(inject([HeroService, XHRBackend], (heroService: HeroService, mockBackend: MockBackend) => {
             var hero = new Hero();
             hero.name = 'George';
             hero.id = 5;
@@ -115,24 +115,25 @@ describe('HeroService', () => {
                 var response = new Response(options);
                 c.mockRespond(response);
             });
-            heroService.save(hero)
+            heroService.update(hero)
                 .then(() => {
                     expect(calledRequestMethod).toBe(RequestMethod.Put);
                 });
         })));
 
-        it('should call POST when hero has no id', async(inject([HeroService, XHRBackend], (heroService: HeroService, mockBackend: MockBackend) => {
-            var hero = new Hero();
-            hero.name = 'George';
+        it('create should call POST when hero has no id', async(inject([HeroService, XHRBackend], (heroService: HeroService, mockBackend: MockBackend) => {
+
             var calledRequestMethod: RequestMethod;
             mockBackend.connections.subscribe((c: MockConnection) => {
                 calledRequestMethod = c.request.method;
+                var hero = new Hero();
+                hero.name = 'George';
                 hero.id = 5;
                 let options = new ResponseOptions({ status: 200, body: hero });
                 var response = new Response(options);
                 c.mockRespond(response);
             });
-            heroService.save(hero)
+            heroService.create('George')
                 .then(() => {
                     expect(calledRequestMethod).toBe(RequestMethod.Post);
                 });
