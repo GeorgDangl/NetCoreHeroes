@@ -21,7 +21,7 @@ gulp.task('copyClientDeps',
     function () {
         var mergeStream = merge();
         for (var i = 0; i < clientLibraries.length; i++) {
-            mergeStream.add(gulp.src([paths.nodeModules + clientLibraries[i] + '/**/*', '!' + paths.nodeModules + clientLibraries[i] + '/**/*tsconfig.json'])
+            mergeStream.add(gulp.src([paths.nodeModules + clientLibraries[i] + '/**/*.js'])
                 .pipe(gulp.dest(paths.clientDeps + clientLibraries[i])));
         }
         return mergeStream;
