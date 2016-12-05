@@ -1,6 +1,6 @@
 # NetCoreHeroes
 
-![Build Status](https://jenkins.dan.gl/buildStatus/icon?job=NetCoreHeroes%20-%20Tests)
+![Build Status](https://jenkins.dangl.me/buildStatus/icon?job=NetCoreHeroes.Tests)
 
 NetCoreHeroes is an example project for the [Angular 2 Tour of Heroes tutorial](https://angular.io/docs/ts/latest/quickstart.html) using
 TypeScript in Visual Studio 2015. It's currently on Angular 2.0.0 Final and Asp.Net Core 1.1.0.
