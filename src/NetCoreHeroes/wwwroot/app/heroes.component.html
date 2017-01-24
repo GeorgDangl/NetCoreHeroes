@@ -12,7 +12,6 @@
         <button class="delete-button" (click)="delete(hero, $event)">Delete</button>
     </li>
 </ul>
-<button (click)="addHero()">Add New Hero</button>
 <button (click)="resetHeroes()">Reset Heroes</button>
 <div *ngIf="addingHero">
     <my-hero-detail (close)="close($event)"></my-hero-detail>
