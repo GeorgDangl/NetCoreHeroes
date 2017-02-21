@@ -1,6 +1,6 @@
 # NetCoreHeroes
 
-> This example is now configured for **webpack**, the latest commit targetting **system.js** can be found at commit [def228f](https://github.com/GeorgDangl/NetCoreHeroes/tree/cdb988aa40c7ce3dfd019cc8ada199bb7665852b)
+> This example is now configured for **webpack**, the latest commit targeting **system.js** can be found at commit [def228f](https://github.com/GeorgDangl/NetCoreHeroes/tree/cdb988aa40c7ce3dfd019cc8ada199bb7665852b)
 
 ![Build Status](https://jenkins.dangl.me/buildStatus/icon?job=NetCoreHeroes.Tests)
 
