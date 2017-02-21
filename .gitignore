@@ -249,4 +249,4 @@ src/NetCoreHeroes/App/**/*.js
 src/NetCoreHeroes/App/**/*.map
 
 # Generated client app in wwwroot folder
-src/NetCoreHeroes/wwwroot/app/*
+src/NetCoreHeroes/wwwroot/dist/*
