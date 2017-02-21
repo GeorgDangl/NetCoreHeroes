@@ -64,8 +64,7 @@
   },
 
   "scripts": {
-    "prepublish": "npm install",
-    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ],
-    "postcompile": "npm run copyClientApp"
+    "prepublish": [ "npm install" , "npm run webpack:vendor", "npm run webpack" ],
+    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }
