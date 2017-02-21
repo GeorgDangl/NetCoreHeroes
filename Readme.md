@@ -1,5 +1,7 @@
 # NetCoreHeroes
 
+> This example is now configured for **webpack**, the latest commit targetting **system.js** can be found at commit [def228f](https://github.com/GeorgDangl/NetCoreHeroes/tree/cdb988aa40c7ce3dfd019cc8ada199bb7665852b)
+
 ![Build Status](https://jenkins.dangl.me/buildStatus/icon?job=NetCoreHeroes.Tests)
 
 NetCoreHeroes is an example project for the [Angular 2 Tour of Heroes tutorial](https://angular.io/docs/ts/latest/quickstart.html) using
@@ -13,6 +15,9 @@ I've [published a few blog posts](https://blog.dangl.me/archive/netcoreheroes-an
 **Visual Studio**: Restore node packages for the main `NetCoreHeroes` project and hit F5 to launch in debug mode.
 
 **Command Line**: Run `npm install`, then `npm run tsc` to restore client side dependencies and compile TypeScript.
+`npm run webpack` creates the client side JavaScript bundles. You might use the [WebPack Task Runner](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner)
+in Visual Studio to automatically regenerate the client side bundles when you debug the solution.
+
 Then run `dotnet restore` and `dotnet build` to compile the Asp.Net Core backend. `dotnet run` starts the project.
 
 ## Run unit tests
