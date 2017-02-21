@@ -13,8 +13,7 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.ts$/, include: /App/, use: ['awesome-typescript-loader?silent=true', 'angular2-template-loader']
-            },
+            { test: /\.ts$/, include: /App/, use: ['awesome-typescript-loader?silent=true', 'angular2-template-loader'] },
             { test: /\.html$/, use: 'html-loader?minimize=false' },
             { test: /\.css$/, use: ['to-string-loader', 'css-loader'] }
         ]
