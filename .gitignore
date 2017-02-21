@@ -245,5 +245,8 @@ lib/
 typings/
 
 # Generated javascript files from typescript
-**/*app/**/*.js
-**/*app/**/*.map
+src/NetCoreHeroes/App/**/*.js
+src/NetCoreHeroes/App/**/*.map
+
+# Generated client app in wwwroot folder
+src/NetCoreHeroes/wwwroot/app/*
