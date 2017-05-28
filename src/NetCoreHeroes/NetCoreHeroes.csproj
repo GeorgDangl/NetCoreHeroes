@@ -31,7 +31,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
-    <PackageReference Include="Chutzpah" Version="4.2.4">
+    <PackageReference Include="Chutzpah" Version="4.3.4">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
