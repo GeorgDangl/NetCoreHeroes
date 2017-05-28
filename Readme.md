@@ -2,10 +2,12 @@
 
 > This example is now configured for **webpack**, the latest commit targeting **system.js** can be found at commit [def228f](https://github.com/GeorgDangl/NetCoreHeroes/tree/cdb988aa40c7ce3dfd019cc8ada199bb7665852b)
 
+> This project is using the Visual Studio 2017 *.csproj format. The latest version that works with Visual Studio 2015 can be found at commit [9a5591c](https://github.com/GeorgDangl/NetCoreHeroes/commit/9a5591c810a0cfe87bb79ddf09dca42b3e96803e)
+
 ![Build Status](https://jenkins.dangl.me/buildStatus/icon?job=NetCoreHeroes.Tests)
 
 NetCoreHeroes is an example project for the [Angular 2 Tour of Heroes tutorial](https://angular.io/docs/ts/latest/quickstart.html) using
-TypeScript in Visual Studio 2015. It's currently on Angular 2.0.0 Final and Asp.Net Core 1.1.0.
+TypeScript in Visual Studio 2015. It's currently on Angular 4.1.3 and Asp.Net Core 1.1.2.
 I've [published a few blog posts](https://blog.dangl.me/archive/netcoreheroes-angular2-with-net-core-in-visual-studio-2015-part-i/) describing the process from setting up Visual Studio to Continuous Integration with Jenkins.
 
 **A live example is [available here](https://netcoreheroes.dangl.me).**
