@@ -39,13 +39,4 @@
   <ItemGroup>
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
-
-  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
-    <Exec Command="npm install" />
-    <Exec Command="npm run webpack:vendor" />
-    <Exec Command="npm run webpack" />
-    <!-- The last generated file (main.js) would otherwise not be picked / not be copied to the publish output folder -->
-    <Exec Command="timeout 1" />
-  </Target>
-
 </Project>
