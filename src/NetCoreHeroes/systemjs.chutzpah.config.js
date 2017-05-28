@@ -8,6 +8,7 @@
             // paths serve as alias
             'lib:': 'node_modules/'
         },
+        defaultJSExtensions: true,
         // map tells the System loader where to look for things
         map: {
             // our app is within the app folder
