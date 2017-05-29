@@ -250,3 +250,6 @@ src/NetCoreHeroes/App/**/*.map
 
 # Generated client app in wwwroot folder
 src/NetCoreHeroes/wwwroot/dist/*
+
+src/NetCoreHeroes/coverage/
+karma-results.xml
