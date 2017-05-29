@@ -6,7 +6,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "webpack": "webpack --config webpack.config.js",
-    "webpack:vendor": "webpack --config webpack.config.vendor.js"
+    "webpack:vendor": "webpack --config webpack.config.vendor.js",
+    "karma": "karma start"
   },
   "license": "ISC",
   "dependencies": {
@@ -37,7 +38,13 @@
     "raw-loader": "0.5.1",
     "@types/node": "^6.0.42",
     "@types/jasmine": "2.5.43",
-    "@types/core-js": "0.9.35"
-  }
-, "-vs-binding":{"BeforeBuild":["webpack"]}
+    "@types/core-js": "0.9.35",
+    "karma": "1.7.0",
+    "karma-jasmine": "1.1.0",
+    "jasmine-core": "2.6.2",
+    "karma-phantomjs-launcher": "1.0.4",
+    "karma-typescript": "3.0.2",
+    "karma-junit-reporter": "1.2.0"
+  },
+  "-vs-binding":{"BeforeBuild":["webpack"]}
 }
