@@ -4,8 +4,8 @@
   "TestHarnessLocationMode": "SettingsFileAdjacent",
   "Tests": [
     {
-      "Includes": [ "*.spec.ts" ],
-      "Excludes": [ "node_modules" ]
+      "Path": "App",
+      "Includes": [ "*.spec.ts" ]
     }
   ],
   "Server": {
