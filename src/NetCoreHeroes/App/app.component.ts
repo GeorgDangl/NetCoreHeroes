@@ -14,6 +14,7 @@ import { Component }       from '@angular/core';
     <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
   </nav>
   <router-outlet></router-outlet>
+  <my-footer></my-footer>
   `,
     styleUrls: ['./app.component.css']
 })

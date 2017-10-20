@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { routing } from './app.routing';
 import { DashboardComponent } from './dashboard.component';
+import { FooterComponent } from './footer.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
@@ -19,6 +20,7 @@ import { HeroService } from './hero.service';
     declarations: [
         AppComponent,
         DashboardComponent,
+        FooterComponent,
         HeroDetailComponent,
         HeroesComponent
     ],
