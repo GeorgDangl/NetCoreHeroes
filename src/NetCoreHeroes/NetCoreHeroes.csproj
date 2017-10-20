@@ -8,6 +8,7 @@
     <PackageId>NetCoreHeroes</PackageId>
     <RuntimeFrameworkVersion>1.1.2</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
+    <TypeScriptToolsVersion>2.4</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
