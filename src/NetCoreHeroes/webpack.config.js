@@ -5,7 +5,10 @@ module.exports = {
     context: __dirname,
     resolve: { extensions: ['.ts', '.js'] }, // .ts is first so that .ts files are preffered over js file, this ensures
     // that angular 2 components are passed through the angular2-template-loader and have their templates and styles inlined
-    entry: { 'main': './App/main.ts' },
+    entry: {
+        'polyfills': './App/polyfills.ts',
+        'main': './App/main.ts'
+    },
     output: {
         path: path.join(__dirname, './wwwroot/dist'),
         filename: '[name].js',
