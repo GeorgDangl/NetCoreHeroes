@@ -6,7 +6,7 @@
     <AssemblyName>NetCoreHeroes</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>NetCoreHeroes</PackageId>
-    <TypeScriptToolsVersion>2.4</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
