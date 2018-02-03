@@ -6,7 +6,6 @@
     <AssemblyName>NetCoreHeroes</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>NetCoreHeroes</PackageId>
-    <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
     <TypeScriptToolsVersion>2.4</TypeScriptToolsVersion>
   </PropertyGroup>
 
