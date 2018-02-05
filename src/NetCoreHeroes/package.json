@@ -45,10 +45,5 @@
     "karma-phantomjs-launcher": "1.0.4",
     "karma-typescript": "3.0.2",
     "karma-junit-reporter": "1.2.0"
-  },
-  "-vs-binding": {
-    "BeforeBuild": [
-      "webpack"
-    ]
   }
 }
